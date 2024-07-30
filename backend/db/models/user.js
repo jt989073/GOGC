@@ -43,9 +43,6 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      bandMember: {
-        type: DataTypes.BOOLEAN,
-      },
       hashedPassword: {
         type: DataTypes.STRING.BINARY,
         allowNull: false,

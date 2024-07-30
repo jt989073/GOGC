@@ -5,7 +5,6 @@ const apiRouter = require('./api')
 
 router.use('/api', apiRouter)
 
-// Serve React build files in production
 if (process.env.NODE_ENV === 'production') {
   const path = require('path');
   // Serve the frontend's index.html file at the root route
@@ -27,6 +26,11 @@ if (process.env.NODE_ENV === 'production') {
     );
   });
 }
+// router.get('/hello/world', function(req, res) {
+//   res.cookie('XSRF-TOKEN', req.csrfToken());
+//   res.send('Hello World!');
+// });
+
 router.get("/api/csrf/restore", (req, res) => {
     const csrfToken = req.csrfToken();
     res.cookie("XSRF-TOKEN", csrfToken);
@@ -35,12 +39,12 @@ router.get("/api/csrf/restore", (req, res) => {
     });
   });
 
+
   if (process.env.NODE_ENV !== 'production') {
     router.get('/api/csrf/restore', (req, res) => {
       res.cookie('XSRF-TOKEN', req.csrfToken());
       return res.json({});
     });
   }
-
 
 module.exports = router;
