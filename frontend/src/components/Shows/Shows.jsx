@@ -8,6 +8,8 @@ import './shows.css'
 export default function Shows() {
     const shows = useSelector(state => Object.values(state.shows))
     const dispatch = useDispatch()
+
+    console.log(shows)
     
     useEffect(() => {
         dispatch(loadShows())
