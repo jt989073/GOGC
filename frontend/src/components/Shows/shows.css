@@ -1,0 +1,23 @@
+.card-container{
+    display: flex;
+    justify-content: center;
+    /* border-top: 2px solid black; */
+    border-bottom: 2px solid black;
+    height: 50px;
+    width: 700px;
+}
+
+.outer-show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-side {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100%;
+    /* width: 100%; */
+}
