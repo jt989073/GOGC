@@ -8,11 +8,10 @@ const load = (shows) => ({
 });
 
 export const loadShows = () => async (dispatch) => {
-    const response = await csrfFetch("/api/shows");
-    
-    const data = await response.json();
-    console.log('hitttttt', data)
-    dispatch(load(data));
+  const response = await csrfFetch("/api/shows");
+
+  const data = await response.json();
+  dispatch(load(data));
   return response;
 };
 
@@ -21,12 +20,11 @@ const initialState = {};
 function showReducer(state = initialState, action) {
   switch (action.type) {
     case LOAD_SHOWS:
-        const newState = {...state}
-        action.shows.forEach(ele => {
-            newState[ele.id] = ele
-        })
-        console.log(newState, '28 of reeducer')
-      return newState;
+      state = { ...state };
+      action.shows.forEach((ele) => {
+        state[ele.id] = ele;
+      });
+      return state;
     default:
       return state;
   }
