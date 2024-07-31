@@ -4,7 +4,7 @@ const bcrypt = require("bcryptjs");
 const { check } = require('express-validator');
 
 const { handleValidationErrors } = require('../../utils/validation');
-const { setTokenCookie, restoreUser } = require("../../utils/auth");
+const { setTokenCookie, restoreUser, requireAuth } = require("../../utils/auth");
 const { User } = require("../../db/models");
 
 const router = express.Router();
@@ -28,6 +28,9 @@ router.get("/", (req, res) => {
       id: user.id,
       email: user.email,
       username: user.username,
+      firstName: user.firstName,
+      lastName: user.lastName,
+      bandMember: user.bandMember
     };
     return res.json({
       user: safeUser,
@@ -60,6 +63,7 @@ router.post("/", validateLogin, async (req, res, next) => {
     id: user.id,
     email: user.email,
     username: user.username,
+    bandMember: user.bandMember
   };
 
   await setTokenCookie(res, safeUser);

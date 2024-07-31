@@ -1,7 +1,32 @@
 .profile-dropdown {
   position: absolute;
+  right: 10px;
+  background-color: grey;
+  color: white;
+}
+
+.profile{
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+
+.profile:hover{
+  color: white;
+  box-shadow: 2px 2px white;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .hidden {
   display: none;
+}
+
+.outer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background-color: black;
+  color: gray;
 }

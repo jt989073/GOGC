@@ -1,0 +1,15 @@
+.Outer {
+    background-image: url('https://res.cloudinary.com/dqwy6sxtc/image/upload/v1722385094/GOGC/Screenshot_20230826_004418_Facebook_wqijwu.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+  }
+
+.pic {
+    height: 100px;
+    width: 100px;
+}

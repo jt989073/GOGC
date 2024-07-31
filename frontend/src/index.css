@@ -1,1 +1,9 @@
-/* TODO: Add sitewide styles */
+
+li {
+    text-decoration: none;
+}
+
+body{
+    margin: 0;
+}
+

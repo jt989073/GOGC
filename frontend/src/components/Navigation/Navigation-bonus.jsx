@@ -7,16 +7,17 @@ function Navigation({ isLoaded }) {
   const sessionUser = useSelector(state => state.session.user);
 
   return (
-    <ul>
-      <li>
+    <div className='outer'>
+      <div>
         <NavLink to="/">Home</NavLink>
-      </li>
+      </div>
+      <h1>Ghosts Of Gray County</h1>
       {isLoaded && (
-        <li>
+        <div>
           <ProfileButton user={sessionUser} />
-        </li>
+        </div>
       )}
-    </ul>
+    </div>
   );
 }
 
