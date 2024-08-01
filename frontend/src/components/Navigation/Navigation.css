@@ -5,10 +5,11 @@
   color: white;
 }
 
+/* #TODO change icon */
 .profile{
   background-color: black;
   color: white;
-  border-radius: 5px;
+  border-radius: 50px;
 }
 
 .profile:hover{
@@ -24,9 +25,30 @@
 
 .outer{
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* padding: 30px; */
+  background-color: rgb(56, 52, 52);
+  color: white;
+}
+
+.inner{
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
-  background-color: black;
-  color: gray;
 }
+
+.logo{
+  height: 100px;
+  width: 700px;
+}
+
+/* #TODO hamburger menu slide out */
+.home-logo { 
+  height: 100px;
+  width: 100px;
+  margin-right: 50px;
+  margin-top: 20px;
+}
+
+/* #TODO 700px resize */

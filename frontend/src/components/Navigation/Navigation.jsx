@@ -34,12 +34,13 @@ function Navigation({ isLoaded }) {
     );
 
   return (
-    <ul>
-      <li>
-        <NavLink to="/">Home</NavLink>
-      </li>
+    <div>
+      <div>
+        <NavLink to="/">
+        <img src="https://res.cloudinary.com/dqwy6sxtc/image/upload/v1722539914/GOGC/20240207_105858_0000_exq6ro.png" alt="" /></NavLink>
+      </div>
       {isLoaded && sessionLinks}
-    </ul>
+    </div>
   );
 }
 
